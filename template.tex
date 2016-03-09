@@ -1,0 +1,95 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{cite}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage[colorlinks]{hyperref}
+\usepackage{epstopdf}
+\hypersetup{
+  colorlinks = true,
+  linkcolor  = magenta,
+  citecolor  = magenta
+}
+\usepackage[all]{hypcap}
+\usepackage{listings}
+\usepackage{color}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\lstset{frame=tb,
+  language=Python,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+\title{Project Proposal: CSE 6730 Project 2}
+\author{Chris Dunlap, Allen Koh, Matt May}
+\date{Spring 2016}
+
+\begin{document}
+
+\begin{titlepage}
+  \maketitle
+  \thispagestyle{empty}
+\end{titlepage}
+
+\newpage
+  \tableofcontents
+  \thispagestyle{empty}
+\newpage
+
+\section{Proposal}
+\label{sec:proposal}
+
+In the United States, the National Aeronautics and Space Administration (NASA)
+has announced its plan to send humans to Mars during the 2030s. This ambitious
+goal requires a variety of studies be conducted to effectively plan the
+endeavor. General habitation, food production, resource extraction,
+communication, spacecraft, and many other areas must be studied to determine
+their optimal configuration.
+
+For our second project, we propose a simulation of population growth dynamics on
+Mars, with the goal of determining an optimal strategy for sustainable
+population growth. Population growth models have been extensively studied in the
+literature \cite{clark1967population}, \cite{caswell2001matrix},
+\cite{meadows1992beyond}, \cite{boserup1983population},
+\cite{ehrlich1971impact} but generally only in the context of our own planet.
+Often, natural populations without resource limitations exhibit exponential
+growth \cite{audesirk1996biology}. However, this type of rapid growth will
+likely be unsustainable under the extreme resource constraints of Mars.
+By considering several proposed habitation models for Mars, we hope to better
+understand the resource requirements of these approaches, and by that develop
+recommendations for sustainable growth.
+
+More specifically, we intend to model humans as consumer entities, and several
+types of resources such as food, water, and sanitation availability as resource
+entities. We intend to take a stochastic, discrete-time approach. As David
+Quammen notes \cite{quammen1996song}, there are four sources of uncertainty to
+which a population may be subject: demographic, environmental, natural
+catastrophes, and genetic. We will attempt to model several of these to
+provide the greatest realism possible.
+
+From a programming perspective, we plan to use Scala, a hybrid
+object-oriented/functional programming language that runs on the Java virtual
+machine (JVM). Scala is performant, relatively terse, statically typed, and
+interoperable with Java, making it an excellent choice for developing our
+simulation.
+
+\clearpage
+\bibliography{template}{}
+\bibliographystyle{plain}
+\end{document}
